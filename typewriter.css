@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body{
+  padding: 40px;
+  background-color: #121212;  
+}
+
+p {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 20px;
+  color: rgba(255,255,255,.70);
+  margin: 0 auto;
+    text-align: center;
+}
+
+/* Animation */
+p {
+  animation: animated-text 2.8s steps(28,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 279px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: royalblue;}
+  to{border-right-color: transparent;}
+}
